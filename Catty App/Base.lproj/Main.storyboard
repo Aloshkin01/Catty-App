@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Set Up Lock Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SetUpLockScreenViewController" id="BYZ-38-t0r" customClass="SetUpLockScreenViewController" customModule="Catty_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lock_Screen_Background" translatesAutoresizingMaskIntoConstraints="NO" id="Bb5-ac-9GS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="JM1-a3-IY8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="74A-yS-sp4" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="839"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="NOK-X2-qan">
+                                                <rect key="frame" x="-8" y="260" width="430" height="318"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Catty App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ze4-Sz-2di">
+                                                        <rect key="frame" x="20" y="20" width="232.5" height="34"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="34" id="rCV-a8-Duw"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSW-Sp-2dk">
+                                                        <rect key="frame" x="20" y="253" width="390" height="45"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="qGk-uu-fWn"/>
+                                                            <constraint firstAttribute="width" constant="390" id="zB0-fm-RyE"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                                        <state key="normal" title="Continue" backgroundImage="Lock_Screen_ContinueButton">
+                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="continueDidPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UJb-19-9mB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Setup code for screen locking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ari-eH-Len">
+                                                        <rect key="frame" x="20" y="108" width="390" height="26"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="26" id="piG-zx-9T6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="6 Digits" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p6h-8N-XxT" userLabel="password">
+                                                        <rect key="frame" x="20" y="152" width="390" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="N34-tt-Wit"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <viewLayoutGuide key="safeArea" id="VzN-nC-PaK"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="hSW-Sp-2dk" secondAttribute="bottom" constant="20" id="2u9-fS-zIX"/>
+                                                    <constraint firstItem="hSW-Sp-2dk" firstAttribute="trailing" secondItem="Ari-eH-Len" secondAttribute="trailing" id="5hP-am-hKf"/>
+                                                    <constraint firstItem="p6h-8N-XxT" firstAttribute="top" secondItem="Ari-eH-Len" secondAttribute="bottom" constant="18" id="90R-MC-EVD"/>
+                                                    <constraint firstItem="hSW-Sp-2dk" firstAttribute="top" secondItem="p6h-8N-XxT" secondAttribute="bottom" constant="71" id="AEq-ti-H1f"/>
+                                                    <constraint firstItem="hSW-Sp-2dk" firstAttribute="leading" secondItem="Ari-eH-Len" secondAttribute="leading" id="FDJ-G6-7XV"/>
+                                                    <constraint firstItem="hSW-Sp-2dk" firstAttribute="trailing" secondItem="p6h-8N-XxT" secondAttribute="trailing" id="T1q-Nq-4y5"/>
+                                                    <constraint firstItem="VzN-nC-PaK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ze4-Sz-2di" secondAttribute="trailing" symbolic="YES" id="bQE-7I-NPq"/>
+                                                    <constraint firstItem="Ari-eH-Len" firstAttribute="top" secondItem="ze4-Sz-2di" secondAttribute="bottom" constant="54" id="heS-Vl-bVo"/>
+                                                    <constraint firstItem="hSW-Sp-2dk" firstAttribute="centerX" secondItem="NOK-X2-qan" secondAttribute="centerX" id="lGx-jq-Rx7"/>
+                                                    <constraint firstItem="hSW-Sp-2dk" firstAttribute="leading" secondItem="ze4-Sz-2di" secondAttribute="leading" id="wM7-dP-PW9"/>
+                                                    <constraint firstItem="hSW-Sp-2dk" firstAttribute="leading" secondItem="p6h-8N-XxT" secondAttribute="leading" id="yPb-Nm-mIy"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="adN-6k-G9k" appends="YES" id="HIF-2E-35c"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="OlR-jc-5FG"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="RPA-QQ-qv2"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bb5-ac-9GS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JDK-lP-V2f"/>
+                            <constraint firstItem="Bb5-ac-9GS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XpZ-tD-tDh"/>
+                            <constraint firstItem="Bb5-ac-9GS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xyh-aw-3Kk"/>
+                            <constraint firstItem="Bb5-ac-9GS" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="yd3-2O-WTH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="74A-yS-sp4" id="JZ2-DV-MPu"/>
+                        <outlet property="contentViewTapGestureRecognizer" destination="adN-6k-G9k" id="h7B-Dg-C1l"/>
+                        <outlet property="continueButton" destination="hSW-Sp-2dk" id="gBY-0t-ewE"/>
+                        <outlet property="passwordTextField" destination="p6h-8N-XxT" id="HBc-5N-ztg"/>
+                        <outlet property="scrollView" destination="JM1-a3-IY8" id="Ie1-PM-CgU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="adN-6k-G9k"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Lock_Screen_Background" width="344.5" height="640"/>
+        <image name="Lock_Screen_ContinueButton" width="378" height="72.5"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
